@@ -24,6 +24,10 @@ Dockerfile + docker-compose.yml
 - **Ollama** héberge les modèles de génération (ex. `gemma3:1b`).
 - **Frontend** (http://localhost:8000/frontend/index.html) : chat en français, dictée vocale, écoute des réponses, historique stocké dans `localStorage`.
 
+![Vue d'ensemble de l'application](docs/images/landing.png)
+
+![Chat avec dictée et audio](docs/images/chat.png)
+
 ---
 
 ## 2. Prérequis
