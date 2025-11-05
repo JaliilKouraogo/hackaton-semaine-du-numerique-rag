@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistant Burkina QA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-main">
+        <div>
+          <h1>Assistant Burkina QA</h1>
+          <p>Posez vos questions sur l'entrepreneuriat et les démarches administratives.</p>
+        </div>
+        <div class="header-actions">
+          <button type="button" id="toggle-history" title="Afficher l'historique">🗂️ Historique</button>
+        </div>
+      </div>
+      <div id="history-panel" class="history-panel" hidden>
+        <div class="history-header">
+          <h2>Historique des recherches</h2>
+          <div class="history-buttons">
+            <button type="button" id="clear-history">Effacer</button>
+            <button type="button" id="close-history">Fermer</button>
+          </div>
+        </div>
+        <ul id="history-list" class="history-list"></ul>
+      </div>
+    </header>
+
+    <main class="chat-area" id="chat"></main>
+
+    <footer class="composer">
+      <form id="ask-form">
+        <textarea id="question" placeholder="Écrivez votre question..." rows="2" required></textarea>
+        <div class="controls">
+          <button type="button" id="mic-btn" title="Dicter votre question (français)">
+            🎙️ Parler
+          </button>
+          <label>
+            Modèle :
+            <select id="model">
+              <option value="gemma3:1b">Gemma3 1B</option>
+              <option value="phi3:mini-4k">Phi-3 Mini 4K</option>
+              <option value="tinyllama:latest">TinyLlama (rapide)</option>
+              <option value="qwen2.5:7b-instruct">Qwen2.5 7B</option>
+            </select>
+          </label>
+          <button type="submit">Envoyer</button>
+        </div>
+      </form>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

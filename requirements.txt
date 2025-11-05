@@ -1,0 +1,14 @@
+numpy<2
+requests
+beautifulsoup4
+tqdm
+python-magic
+PyPDF2
+langchain
+fuzzywuzzy
+python-dotenv
+lxml
+sentence-transformers
+qdrant-client
+fastapi
+uvicorn
